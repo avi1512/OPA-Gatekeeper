@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-privillege-false
+  labels:
+    app: nginx-privilege-false
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    securityContext:
+      privileged: false
